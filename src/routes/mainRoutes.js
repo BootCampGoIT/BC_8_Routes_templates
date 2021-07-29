@@ -7,7 +7,7 @@ import ProfilePage from "../pages/ProfilePage";
 
 export const mainRoutes = [
   { name: "home", path: "/", exact: true, component: HomePage },
-  { name: "products", path: "/products", exact: true, component: ProductsPage },
+  { name: "products", path: "/products", exact: false, component: ProductsPage },
   { name: "administration", path: "/admin", exact: true, component: AdminPage },
   { name: "cart", path: "/cart", exact: true, component: CartPage },
   { name: "profile", path: "/profile", exact: true, component: ProfilePage },

@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationStyled } from "./NavigationStyled";
 import { NavLink } from "react-router-dom";
 
-const Navigation = ({ routes }) => {
+const Navigation = ({ routes, url = "", prevPathname = "" }) => {
   return (
     <NavigationStyled>
       <ul className='navigationList'>
@@ -11,7 +11,7 @@ const Navigation = ({ routes }) => {
             <NavLink
               className='navigationLink'
               activeClassName='activeNavigationLink'
-              to={route.path}
+              to={{ pathname: url + route.path, iamfrom: prevPathname }}
               exact={route.exact}>
               {route.name}
             </NavLink>
