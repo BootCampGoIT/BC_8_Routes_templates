@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
+import withState from "./hoc/withState";
 
 class Test extends Component {
   state = {
@@ -17,9 +18,10 @@ class Test extends Component {
       <>
         <h2>Test</h2>
         <p>{this.state.data}</p>
+        <p>{this.props.data}</p>
       </>
     );
   }
 }
 
-export default Test;
+export default withState(Test);

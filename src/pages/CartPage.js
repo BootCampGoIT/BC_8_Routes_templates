@@ -3,7 +3,7 @@ import React from 'react'
 
 const CartPage = () => {
     return (
-        <h2>CartPAge</h2>
+        <h2>CartPage</h2>
     );
 }
 

@@ -1,16 +1,46 @@
-import AdminPage from "../pages/AdminPage";
-import AuthPage from "../pages/AuthPage";
-import CartPage from "../pages/CartPage";
-import HomePage from "../pages/HomePage";
-import ProductsPage from "../pages/ProductsPage";
-import ProfilePage from "../pages/ProfilePage";
+import { lazy } from "react";
 
 export const mainRoutes = [
-  { name: "home", path: "/", exact: true, component: HomePage },
-  { name: "products", path: "/products", exact: false, component: ProductsPage },
-  { name: "administration", path: "/admin", exact: true, component: AdminPage },
-  { name: "cart", path: "/cart", exact: true, component: CartPage },
-  { name: "profile", path: "/profile", exact: true, component: ProfilePage },
-  { name: "registration", path: "/register", exact: true, component: AuthPage },
-  { name: "login", path: "/login", exact: true, component: AuthPage },
+  {
+    name: "home",
+    path: "/",
+    exact: true,
+    component: lazy(() => import("../pages/HomePage" /* webpackChunkName: "HomePage" */)),
+  },
+  {
+    name: "products",
+    path: "/products",
+    exact: false,
+    component: lazy(() => import("../pages/ProductsPage" /* webpackChunkName: "ProductsPage" */)),
+  },
+  {
+    name: "administration",
+    path: "/admin",
+    exact: true,
+    component: lazy(() => import("../pages/AdminPage" /* webpackChunkName: "AdminPage" */)),
+  },
+  {
+    name: "cart",
+    path: "/cart",
+    exact: true,
+    component: lazy(() => import("../pages/CartPage" /* webpackChunkName: "CartPage" */)),
+  },
+  {
+    name: "profile",
+    path: "/profile",
+    exact: true,
+    component: lazy(() => import("../pages/ProfilePage" /* webpackChunkName: "ProfilePage" */)),
+  },
+  {
+    name: "registration",
+    path: "/register",
+    exact: true,
+    component: lazy(() => import("../pages/AuthPage" /* webpackChunkName: "AuthPage" */)),
+  },
+  {
+    name: "login",
+    path: "/login",
+    exact: true,
+    component: lazy(() => import("../pages/AuthPage" /* webpackChunkName: "AuthPage" */)),
+  },
 ];
