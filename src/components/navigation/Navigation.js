@@ -14,6 +14,7 @@ const Navigation = ({ routes, url = "", prevPathname = "" }) => {
               to={{ pathname: url + route.path, iamfrom: prevPathname }}
               exact={route.exact}>
               {route.name}
+              
             </NavLink>
           </li>
         ))}
